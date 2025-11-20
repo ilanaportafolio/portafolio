@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portafolio ilaa</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header class="navbar">
+    <!-- Menú de navegación -->
+        <nav class="navbar">
+            <div class="navbar-container">
+    <div class="logo">Mi Portafolio</div>
+    <nav>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Abrir menú">
+        <span class="hamburger"></span>
+      </button>
+      <ul id="main-menu" class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+<section id="inicio" class="hero">
+    <div id="maracas" class="maracas2">
+    </div>
+    <div id="Ilana" class="Ilana2">
+      <img src ="imagenes/descarga (1)-Photoroom.png" alt="Imagen de inicio">
+    </div>
+    <div class="hero-content">
+      <h1>¡Hola! Soy <span>Ilana De La Espriella</span></h1>
+      <p>Editor de contenido | Diseñador hipermedia | Creativo</p>
+      <a href="#proyectos" class="btn">Ver Proyectos</a>
+    </div>
+</section>
+<section id="sobre-mi" class="about">
+  <h2>Sobre mí</h2>
+  <div class="about-container">
+    <img src="imagenes/Imagen de WhatsApp 2025-09-11 a las 00.22.24_914b2e98.jpg" alt="Foto de perfil">
+    <p>
+      Soy una estudiante del programa de Diseño Hipermedia en la fundación universitaria los libertadores.
+      Me gusta crear contenido digital y explorar los distintos metodos que existen en el diseño.
+    </p>
+  </div>
+</section>
+
+<section id="proyectos" class="projects">
+  <h2>Proyectos</h2>
+  <div class="project-list">
+    <div class="project-item">
+      <img src="imagenes/hovito.png" alt="Proyecto 1">
+      <h3>Proyecto 1</h3>
+      <p>Edición de fotografía</p>
+    </div>
+    <div class="project-item">
+      <img src="imagenes/esseuli.jpg" alt="Proyecto 2">
+      <h3>Proyecto 2</h3>
+      <p>Manejo de photoshop</p>
+    </div>
+    <div class="project-item">
+      <img src="imagenes/floress.png" alt="Proyecto 3">
+      <h3>Proyecto 3</h3>
+      <p>Edición de fotografia experimental y fantastica</p>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contact">
+  <form class="contact-form">
+    <input type="text" placeholder="Nombre" required>
+    <input type="email" placeholder="Correo electrónico" required>
+    <textarea placeholder="." rows="5" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<section class="social-contact">
+  <h2>Contactame !</h2>
+  <div class="social-links">
+    <a href="https://wa.me/573148732830" target="_blank" class="whatsapp">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+      WhatsApp
+    </a>
+    <a href="https://instagram.com/florecieur" target="_blank" class="instagram">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+      Instagram
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2025 Mi Portafolio</p>
+</footer>
+
+<script>
+  // Toggle menu hamburguesa
+  const btn = document.querySelector('.menu-toggle');
+  const menu = document.getElementById('main-menu');
+
+  btn.addEventListener('click', (e) => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+    menu.classList.toggle('open');
+  });
+
+  // Cerrar al hacer click fuera (móvil)
+  document.addEventListener('click', (e) => {
+    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script>
+</body>
+</html>
